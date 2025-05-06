@@ -1,5 +1,36 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    width: 100vh;
+    height: 100vh;
+}
+
+.wrapper{
+    width: 60%;
+    height: 50%;
+    background-color: blue;
+    display: grid;
+    /* grid-template-rows: 50px;    */
+    /* grid-template-rows: row1, row2, row3, ......, row-nth */
+    
+    /* grid-template-columns: 500px 200px; */
+    /* grid-template-cols: col1, col2, col3, ......, col-nth */
+    grid-template-rows: repeat(7, 1fr); /*fr: fraction*/
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-columns: repeat(6, 50px);      */
+    /*#times: 6, size: 50px like grid-template-columns: 50px 50px 50px 50px 50px 50px*/
+    /* grid-template-columns: 1fr 2fr 3fr 2fr 4fr 2fr; */
+}
+
+.box{
+    background-color: paleturquoise;
+    /* width: 50px; */
+}
+
+.box-1{
+    grid-row-start: 1;
 }
