@@ -20,19 +20,27 @@ body{
     /* grid-template-columns: 500px 200px; */
     /* grid-template-cols: col1, col2, col3, ......, col-nth */
     grid-template-rows: repeat(3, 1fr); /*fr: fraction*/
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     /* grid-template-columns: repeat(6, 50px);      */
     /*#times: 6, size: 50px like grid-template-columns: 50px 50px 50px 50px 50px 50px*/
     /* grid-template-columns: 1fr 2fr 3fr 2fr 4fr 2fr; */
     /* grid-gap: 0px 15px; */
 
     grid-gap: 5px;
-    grid-template-areas: 
+    /* grid-template-areas: 
         "header header"
         "sidebar content-1"
         "sidebar content-2"
+    ; */
+
+    grid-template-areas: 
+    "header header header"
+    "menu main right"
+    "menu footer footer"
     ;
 
+    /* justify-content: space-between;
+    align-content: space-between; */
 }
 
 .box{
@@ -71,13 +79,18 @@ body{
 }
 
 .box-2{
-    grid-area: sidebar;
+    grid-area: menu;
 }
 
 .box-3{
-    grid-area: content-1;
+    grid-area: main;
 }
 
 .box-4{
-    grid-area: content-2;
+    grid-area: right;
 }
+
+.box-5{
+    grid-area: footer;
+}
+
